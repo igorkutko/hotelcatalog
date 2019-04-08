@@ -1,6 +1,8 @@
 package org.gk.controller;
 
 import org.gk.model.HotelModel;
+import org.gk.request.Request;
+import org.gk.response.Response;
 import org.gk.service.HotelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -33,13 +35,8 @@ public class HotelController {
     }
 
     @RequestMapping(value = "/addEntity", method = RequestMethod.POST)
-    public void addEntity(@RequestBody HotelModel hotelModel) {
-//        String id = "1";
-//        String name = "Hotel 1";
-//        String country = "Country 1";
-//
-//        HotelModel hotelModel = new HotelModel(id, name, country);
+    public void addEntity(@RequestBody Request request) {
 
-        hotelService.addEntity(hotelModel);
+        Response response = hotelService.addEntity(request);
     }
 }

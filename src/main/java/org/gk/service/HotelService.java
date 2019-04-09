@@ -68,7 +68,7 @@ public class HotelService {
         return response;
     }
 
-    public void deleteEntity(Request request){
+    public Response deleteEntity(Request request){
 
         String request_id = request.getRequest_id();
         String security_token = request.getSecurity_token();
@@ -82,6 +82,8 @@ public class HotelService {
         response.setRequest_id(request_id);
         //response.setEntity(savedHotelModel);
         response.setMessage("Entity Deleted Successfully");
+
+        return response;
     }
 
 }

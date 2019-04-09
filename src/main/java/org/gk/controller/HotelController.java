@@ -39,4 +39,16 @@ public class HotelController {
 
         Response response = hotelService.addEntity(request);
     }
+
+    @RequestMapping(value = "/updateEntity", method = RequestMethod.POST)
+    public void updateEntity(@RequestBody Request request) {
+
+        Response response = hotelService.updateEntity(request);
+    }
+
+    @RequestMapping(value = "/deleteEntity", method = RequestMethod.POST)
+    public void deleteEntity(@RequestBody Request request) {
+
+        Response response = hotelService.deleteEntity(request);
+    }
 }

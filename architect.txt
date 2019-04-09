@@ -1,0 +1,41 @@
+Architect
+===
+
+Class HotelModel
+---
+Description:
+Contains/describes object hotel
+
+fields:
+String id
+String name
+String country
+
+Interface HotelRepository
+---
+Description:
+Contains interface which extends interface MongoRepository
+There are already implemented basic CRUD methods
+
+Class HotelService
+---
+Description:
+Contains collection of methods to call of repositories methods with parameters transfer
+
+Class HotelController
+---
+Description:
+Serves to forwarding of external requests to inner methods throw routes and calls of services methods
+
+Route;Method;Request method;Comment:
+root route: http://address/v1/hc
+/getEntity; getEntity; POST; find one entity by id/name
+/getAll; getAll; POST; find all entities
+/getAllUnmappedEntities; getAllUnmappedEntities; POST; find all entities
+/addEntity; addEntity; POST; create new entity
+/updateEntity; updateEntity; POST; modify existing entity
+/deleteEntity; deleteEntity; POST; remove entity by id/name
+
+
+
+
